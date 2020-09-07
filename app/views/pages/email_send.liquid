@@ -1,13 +1,14 @@
 ---
 method: post
 ---
+{%- assign email_address = context.params.email_address -%}
+{{ email_address }}
 {% parse_json data %}
 {
-  "email_address": {{email_address}}
+  "email_address": "{{email_address}}"
 }
 {% endparse_json %}
-{%- assign email_address = context.params.email_address -%}
-
+{{ data }}
 {% graphql notify = 'email_send', data: data %}
 
 <div class="max-w-2xl mx-auto mt-10 text-center">
@@ -22,8 +23,5 @@ method: post
     </h2>
 
 </div>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 4bf90e9f95d601f42e278055199a770652ba9bdc
