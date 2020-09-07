@@ -10,11 +10,15 @@ method: post
 
 {% graphql notify = 'email_send', data: data %}
 
-{% if result.errors %}
-Something went wrong :(
-<br>
-{{ result.errors }}
-{% else %}
-email was sent successfully.
-<!-- <script>window.location.href = '/thankyou_success_page';</script> -->
-{% endif %} 
+<div class="max-w-2xl mx-auto mt-10 text-center">
+    <h2 class="text-2xl font-semibold">
+        {% if result.errors %}
+            Something went wrong :(
+            <br>
+            {{ result.errors }}
+            {% else %}
+            email was sent successfully.
+        {% endif %} 
+    </h2>
+
+</div>
