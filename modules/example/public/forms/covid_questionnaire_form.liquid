@@ -1,0 +1,88 @@
+---
+name: COVID_questionnaire_form
+resource: User
+---
+
+<form action="/thankyou/" method="POST" >
+  <div class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-2xl font-semibold">Please complete the following questions</h2>
+    <ol class="font-semibold text-gray-700">
+      <li>Do you have any of the symptoms or signs?</li>
+        <ul class="mt-1 font-light ml-4">
+          <li>
+            New or worsening cough
+            <input type="radio" name="question_1_1" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_1" value="No">No
+          </li>
+          <li>
+            Shortness of breath
+            <input type="radio" name="question_1_2" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_2" value="No">No
+          </li>
+          <li>
+            Sore throat
+            <input type="radio" name="question_1_3" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_3" value="No">No
+          </li>
+          <li>
+            Runny nose, sneezing or nasal congestion (in absence of underlying reasons for symptoms such as seasonal allergies and post nasal drip)
+            <input type="radio" name="question_1_4" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_4" value="No">No
+          </li>
+          <li>
+            Hoarse voice
+            <input type="radio" name="question_1_5" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_5" value="No">No
+          </li>
+          <li>
+            Difficulty swallowing
+            <input type="radio" name="question_1_6" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_6" value="No">No
+          </li>
+          <li>
+            New smell or taste disorder(s)
+            <input type="radio" name="question_1_7" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_7" value="No">No
+          </li>
+          <li>
+            Nausea/vomiting, diarrhea, abdominal pain
+            <input type="radio" name="question_1_8" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_8" value="No">No
+          </li>
+          <li>
+            Unexplained fatigue/malaise
+            <input type="radio" name="question_1_9" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_9" value="No">No
+          </li>
+          <li>
+            Chills
+            <input type="radio" name="question_1_10" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_10" value="No">No
+          </li>
+          <li>
+            Headache
+            <input type="radio" name="question_1_11" value="Yes" required="required">Yes
+            <input type="radio" name="question_1_11" value="No">No
+          </li>
+        </ul>
+      <li>
+        Have you travelled outside of Canada or had close contact with anyone that has travelled outside of Canada in the past 14 days?
+        <input type="radio" name="question_2" value="Yes" required="required">Yes
+        <input type="radio" name="question_2" value="No">No
+      </li>
+      <li>
+        Do you have a fever?
+        <input type="radio" name="question_3" value="Yes" required="required">Yes
+        <input type="radio" name="question_3" value="No">No
+      </li>
+      <li>
+        Have you had close contact with anyone with respiratory illness or a confirmed or probable case of COVID-19?
+        <input type="radio" name="question_4" value="Yes" required="required">Yes
+        <input type="radio" name="question_4" value="No">No
+      </li>
+    </ol>
+    <button type="submit" class="button">Submit</button>
+    <button type="reset" class="button">Reset</button>
+  </div>
+
+</form>

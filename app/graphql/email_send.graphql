@@ -1,0 +1,9 @@
+mutation notify($data: HashObject) {
+  email_send(
+    template: { name: "covid_questionnaire_link" }
+    data: $data
+  ) {
+    errors { message }
+    is_scheduled_to_send
+  }
+}

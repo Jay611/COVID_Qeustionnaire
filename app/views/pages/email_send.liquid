@@ -1,0 +1,20 @@
+---
+method: post
+---
+{% parse_json data %}
+{
+  "email_address": {{email_address}}
+}
+{% endparse_json %}
+{%- assign email_address = context.params.email_address -%}
+
+{% graphql notify = 'email_send', data: data %}
+
+{% if result.errors %}
+Something went wrong :(
+<br>
+{{ result.errors }}
+{% else %}
+email was sent successfully.
+<!-- <script>window.location.href = '/thankyou_success_page';</script> -->
+{% endif %} 
