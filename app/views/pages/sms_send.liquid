@@ -1,15 +1,15 @@
 ---
 method: post
 ---
-{%- assign email_address = context.params.email_address -%}
-<!-- {{ email_address }} -->
+{%- assign phone_number = context.params.phone_number -%}
+<!-- {{ phone_number }} -->
 {% parse_json data %}
 {
-  "email_address": "{{email_address}}"
+  "phone_number": "{{phone_number}}"
 }
 {% endparse_json %}
 <!-- {{ data }} -->
-{% graphql notify = 'email_send', data: data %}
+{% graphql notify = 'sms_send', data: data %}
 
 <div class="max-w-2xl mx-auto mt-10 text-center">
     <h2 class="text-2xl font-semibold">
@@ -18,7 +18,7 @@ method: post
             <br>
             {{ result.errors }}
             {% else %}
-            email was sent successfully.
+            SMS was sent successfully.
         {% endif %} 
     </h2>
 
