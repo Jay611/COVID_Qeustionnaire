@@ -2,13 +2,13 @@
 method: post
 ---
 {%- assign phone_number = context.params.phone_number -%}
-{{ phone_number }}
+<!-- {{ phone_number }} -->
 {% parse_json data %}
 {
   "phone_number": "{{phone_number}}"
 }
 {% endparse_json %}
-{{ data }}
+<!-- {{ data }} -->
 {% graphql notify = 'sms_send', data: data %}
 
 <div class="max-w-2xl mx-auto mt-10 text-center">

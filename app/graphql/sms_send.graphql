@@ -1,6 +1,6 @@
 mutation notify($data: HashObject) {
-  sms_send(
-    template: { name: "covid_questionnaire_sms" }
+  email_send(
+    template: { name: "covid_questionnaire_email" }
     data: $data
   ) {
     errors { message }

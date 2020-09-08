@@ -41,7 +41,7 @@ button[type=reset]:hover{
     color: #000;
     background-color: #aaaaaa;
 }
-input[type=email], input[type=tel]{
+input[type=email]{
     height: 38px;
     width: 300px;
     padding: 6px 10px;

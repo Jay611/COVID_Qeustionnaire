@@ -4,17 +4,9 @@
     <h2 class="text-2xl font-semibold">
       Welcome to SalonEverywhere Pre-Appointment COVID Screening Tool
     </h2>
-    <div class="text-sm font-semibold mt-8" style="width: fit-content; margin: auto;">
+    <div class="text-sm font-semibold mt-8">
       <h4>Please enter your email address or phone number:</h4>
-      <div>
-        <h4 style="text-align: left">email:</h4>
-        {% include_form "modules/example/send_email_form" %}
-        <br/>
-        <h4 style="text-align: left">phone:</h4>
-        {% include_form "modules/example/send_sms_form" %}
-      </div>
-
-
+      {% include_form "modules/example/send_email_form" %}
     </div>
     
   </div>
